@@ -1,0 +1,90 @@
+table,
+th,
+td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  color: white;
+  text-align: center;
+}
+th,
+td {
+  background-color: #036363;
+  padding: 1em;
+}
+.item-designation{
+    text-transform: capitalize;
+}
+.fecture-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+}
+.action-parent{
+  display: flex;
+  flex-wrap: wrap;
+}
+.action{
+    border: none;
+    padding: 0.8em 1.3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background-color: #036363;
+    color: white;
+    border-radius: 8px;
+}
+.action:hover{
+    background-color: rgba(8, 136, 136, 0.7);
+    box-shadow: 0px 5px 9px 0 rgba(3, 163, 163, 0.2);
+    transition: background-color 0.2s; 
+}
+.edit{
+    margin-right: 1em;
+}
+
+
+.facture-form {
+  padding: 2em;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.facture-form p{
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0;
+    text-decoration: underline dashed #036363;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  margin: 1.5em 0em;
+}
+.input-designation{
+    margin-top: 1em !important;
+}
+.input-container label{
+    font-size: 1.15em;
+    padding: 0 0.2em;
+}
+input{
+    padding: 0.5em 0.8em;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+input:focus{
+    outline: none;
+    border: 2px solid #036363;
+    box-shadow: 0 4px 8px 0 rgba(3, 99, 99, 0.3);
+}
+button[type="submit"]{
+    width: 100%;
+    font-size: large;
+    padding: 0.5em 0;
+    border-radius: 10px;
+    border: none;
+    background: #036363;
+    color: white;
+    cursor: pointer;
+}

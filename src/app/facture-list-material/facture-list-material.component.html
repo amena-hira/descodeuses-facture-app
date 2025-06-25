@@ -1,0 +1,54 @@
+<div class="flex gap-4">
+  <div>
+    <table mat-table [dataSource]="factureList" class="!bg-teal-800">
+      <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- ID Column -->
+      <ng-container matColumnDef="no">
+        <th mat-header-cell *matHeaderCellDef>No.</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <!-- Designation Column -->
+      <ng-container matColumnDef="designation">
+        <th mat-header-cell *matHeaderCellDef>Designation</th>
+        <td mat-cell *matCellDef="let element">{{ element.designation }}</td>
+      </ng-container>
+
+      <!-- Quantité Column -->
+      <ng-container matColumnDef="quantite">
+        <th mat-header-cell *matHeaderCellDef>Quantité</th>
+        <td mat-cell *matCellDef="let element">{{ element.quantite }}</td>
+      </ng-container>
+
+      <!-- Prix unitaire Column -->
+      <ng-container matColumnDef="prix unitaire">
+        <th mat-header-cell *matHeaderCellDef>Prix unitaire</th>
+        <td mat-cell *matCellDef="let element">{{ element.prixUnitaire }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+  <mat-card>
+    <mat-card-content>
+      <form class="flex flex-col">
+        <mat-form-field>
+          <mat-label>Designation</mat-label>
+          <input matInput type="text" placeholder="Designation" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Quantité</mat-label>
+          <input matInput type="number" placeholder="Quantité" />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Prix Unitaire</mat-label>
+          <input matInput type="number" placeholder="Prix Unitaire" />
+        </mat-form-field>
+        <button type="submit" mat-raised-button>Basic</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
